@@ -15,3 +15,7 @@ label {
   font-family: 'Nunito', sans-serif;
   text-align: justify;
 }
+
+html {
+  scroll-behavior: smooth;
+}

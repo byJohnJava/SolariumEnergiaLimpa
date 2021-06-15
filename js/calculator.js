@@ -3,7 +3,13 @@ function calculoPainel() {
   var hsp = parseFloat(document.getElementById("hsp").value);
   var valorpotencia = document.getElementById("valorpotencia");
   var quantPlacas = document.getElementById("quantPlacas");
-  var custoMensal = parseFloat(document.getElementById("custoMensal").value);
+  var custoMensal = document.getElementById("custoMensal").value;
+  if (custoMensal != "") {
+    custoMensal = parseFloat(custoMensal);
+  }
+  var paragrafoEconomia = document.getElementById("economia");
+  var Pmedio = 0;
+  var economia = 0;
   potencia = ((consumo / 30) / hsp) / 0.8;
   painel = Math.ceil((potencia * 1000) / 340);
   area = painel * 2 * 1
@@ -40,7 +46,41 @@ function calculoPainel() {
     Pmedio = "92.100,00"
   }
   Pmediob = Pmedio.replace('.', '');
-  economia = custoMensal * 0.95
-  payback = (parseFloat(Pmediob) / (0.95 * custoMensal * 12)).toFixed(2)
-  quantPlacas.innerHTML = " <br> <form> <fieldset> <legend>Resultado de Dimensionamento e investimento</legend> <p>Quantidade necessária de painéis fotovoltáicos: <b>" + painel + "</b> * (Considerado painel de 340W de 72 células, cada um com comprimento de 2 m, largura de 1 m e peso de 22 Kg).</p><p>Potência necessária do Inversor: <b>" + inversor + " Kw.</b></p><p>Preços médios totais da instalação de placa solar e equipamentos é de: <b>R$</b> <b>" + Pmedio + "</b></p><p>A área necessária estimada para instalação dos painéis fotovoltáicos é de: <b>" + area + " m²</b></p><p>Com uma economia média mensal de R$" + economia + ", O payback do investimento é de : <b>" + payback + "</b> anos</p> </fieldset> </form>";
+  economia = (custoMensal * 0.95).toFixed(2);
+  payback = (parseFloat(Pmediob) / (0.95 * custoMensal * 12)).toFixed(2);
+  quantPlacas.innerHTML = `<br> 
+  <form> 
+    <legend>Resultado de Dimensionamento e investimento</legend> 
+    <p>Quantidade necessária de painéis fotovoltáicos: <b> ${painel} </b> 
+    * (Considerado painel de 340W de 72 células, cada um com comprimento de 2 m, largura de 1 m e peso de 22 Kg).
+    </p>
+    <p>Potência necessária do Inversor: <b> ${inversor}Kw.</b></p>
+    <p>Preços médios totais da instalação de placa solar e equipamentos é de: <b>R$</b> <b> ${Pmedio} </b></p>
+    <p>A área necessária estimada para instalação dos painéis fotovoltáicos é de: <b> ${area}m²</b></p>
+    
+  </form>`;
+
+  if (custoMensal != "") {
+    paragrafoEconomia.innerHTML = `
+    <p>Com uma economia média mensal de R$ ${economia} , O payback do investimento é de : <b> ${payback} </b> anos</p>`
+  }
+
+  var form = document.getElementById('formCalculo');
+  form.addEventListener('submit', function(e){
+      e.preventDefault();
+  });
+  
+}
+
+function limparCampos(){
+  var inputConsumo = document.getElementById("consumo");
+  var inputHsp = document.getElementById("hsp");
+  var inputCustoMensal = document.getElementById("custoMensal");
+  var quantPlacas = document.getElementById("quantPlacas");
+  var paragrafoEconomia = document.getElementById("economia");
+  inputConsumo.value = "";
+  inputHsp.value = "";
+  inputCustoMensal.value = "";
+  quantPlacas.innerHTML = "";
+  paragrafoEconomia.innerHTML = "";
 }

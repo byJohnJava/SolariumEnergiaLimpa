@@ -45,8 +45,8 @@
         <div class="row">
           <div class="col-sm-8 col-md-7 py-0">
             <h4 class="text-white"><img src="img/imgHeader.png" width="350" class="img-fluid rounded mx-auto d-block"
-                alt=""></h4>
-            <!--  <p class="text-muted">Adquira agora mesmo nossos painéis solares e economize até 20% por mês</p> -->
+                alt="">
+            </h4>
           </div>
         </div>
       </div>
@@ -66,20 +66,16 @@
             <li><button type="button" class="btn btn-link nav-link px-2 text-white" data-bs-target="#modalAgenda2030"
                 data-bs-toggle="modal"><i class="bi bi-book" style="margin-right: 5px; color: #ffc107;"></i>Agenda
                 2030</button></li>
-            <li><button type="button" class="btn btn-link nav-link px-2 text-white" data-bs-target="#exampleModal"
+            <li><button type="button" onclick="limparCampos()" class="btn btn-link nav-link px-2 text-white" data-bs-target="#modalCalculadora"
                 data-bs-toggle="modal"><i class="bi bi-calculator"
                   style="margin-right: 5px; color: #ffc107;"></i>Simulador de Investimento | Economia</button></li>
             <li><a href="#footer" class="nav-link px-2 text-white"><i class="bi bi-info-circle"
                   style="margin-right: 5px; color: #ffc107;"></i>Sobre</a></li>
           </ul>
 
-          <!--  <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-        </form> -->
-
           <div class="text-end">
             <a href="#footer">
-              <button type="button" class="btn btn-warning">Inscreva-se para novidades</button>
+              <button type="submit" class="btn btn-warning">Inscreva-se para novidades</button>
             </a>
           </div>
         </div>
@@ -90,8 +86,8 @@
 
   <main>
 
-    <!-- Modal -->
-    <div class="modal fade" id="modalAgenda2030" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Agenda 2030 -->
+    <div class="modal fade" id="modalAgenda2030" tabindex="-1" aria-labelledby="Agenda 2030" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header bg-dark">
@@ -111,11 +107,11 @@
     </div>
 
     <!-- Modal Calculadora -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalCalculadora" tabindex="-1" aria-labelledby="Calculadora de Investimento" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header bg-dark">
-            <h5 class="modal-title" id="exampleModalLabel" style="color: white;"><i class="bi bi-calculator"
+            <h5 class="modal-title" id="modalCalculadora" style="color: white;"><i class="bi bi-calculator"
                 style="margin-right: 5px; color: #ffc107; font-size: 2rem;"></i>Simulador de Investimento | Economia
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
@@ -127,7 +123,7 @@
               fotovoltaico "padrão", porém buscamos nos aproximar ao máximo da prática para cada projeto,
               orientando como coletar o índice de irradiação solar da localidade escolhida, e consideramos as perdas
               médias consideradas no projeto.</h6>
-            <form>
+            <form id="formCalculo">
               <section>
                 <div>
                   <label>Informe seu consumo médio em kWh/mês (informação consta na conta de luz mensal.):</label>
@@ -152,9 +148,12 @@
                   atual.</label>
                 <label>Informe o valor médio pago na sua conta de luz:</label>
                 <input type="text" id="custoMensal" class="form-control-sm"
-                  placeholder="valor médio pago de conta de luz" name="custoMensal" required>
+                  placeholder="valor médio pago de conta de luz" name="custoMensal">
               </section>
               <section id="quantPlacas">
+                <p></p>
+              </section>
+              <section id="economia">
                 <p></p>
               </section>
           </div>
@@ -172,8 +171,6 @@
         <h1 class="display-4 fw-normal">
           <img src="img/hero.png" width="1240" class="img-fluid rounded mx-auto d-block" alt=""></h1>
       </div>
-      <!-- <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
     </div>
 
     <div class="album py-5 bg-light">
@@ -190,13 +187,12 @@
               </svg>
 
               <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer...</p>
+                <p class="card-text">Origem e Evolução da Energia Solar</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a class="btn btn-sm btn-outline-secondary" href="/card1.html" role="button">Link</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="card1.html" role="button">Leia mais</a>
                   </div>
-                  <small class="text-muted">9 mins</small>
+                  <small class="text-muted">4 mins</small>
                 </div>
               </div>
             </div>
@@ -207,14 +203,14 @@
               <svg class="bd-placeholder-img card-img-top" width="100%" height="0" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <title>Placeholder</title>
-                <img src="img/img2.png" class="img-thumbnail" style="height: 252px;" alt="">
+                <img src="img/imgVantagemCard.png" class="img-thumbnail" style="height: 252px;" alt="">
               </svg>
 
               <div class="card-body">
-                <p class="card-text">Incluir texto</p>
+                <p class="card-text">Vantagens e Desvantagens</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Veja mais</button>
+                    <a class="btn btn-sm btn-outline-secondary" href="card2.html" role="button">Leia mais</a>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -230,34 +226,35 @@
               </svg>
 
               <div class="card-body">
-                <p class="card-text">Incluir texto</p>
+                <p class="card-text">Como funciona</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Veja mais</button>
+                    <a class="btn btn-sm btn-outline-secondary" href="card3.html" role="button">Leia mais</a>
                   </div>
-                  <small class="text-muted">9 mins</small>
+                  <small class="text-muted">6 mins</small>
                 </div>
               </div>
             </div>
           </div>
   </main>
-  <form action="">
+  <form>
     <div class="container justify-content-center"
       style="background-color: #ffc107; border-radius: 8px; margin-bottom: 15px;">
       <div class="mb-3" style="padding-top: 11px;">
         <label for="exampleFormControlInput1" class="form-label">Nome</label>
-        <input type="nome" class="form-control" id="exampleFormControlInput1" placeholder="Fulano da Silva">
+        <input type="nome" class="form-control" id="exampleFormControlInput1" placeholder="Fulano da Silva" required>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="fulano@example.com.br">
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="fulano@example.com.br" required>
       </div>
       <div class="py-2" style="margin-bottom: 15px;">
         <label for="exampleFormControlTextarea1" class="form-label">Comentários</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="resize: none;"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="resize: none;" required></textarea>
       </div>
-      <input class="btn btn-light" style="margin-bottom: 20px;" type="submit" value="Submit">
+      <input class="btn btn-light" onclick="formEnviadoSucesso()" style="margin-bottom: 20px;" type="submit" value="Enviar">
     </div>
+    
   </form>
 
 
