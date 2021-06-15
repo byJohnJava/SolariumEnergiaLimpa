@@ -94,7 +94,7 @@
             <h5 class="modal-title" id="modalAgenda2030" style="color: white;"><i class="bi bi-book"
                 style="margin-right: 8px; color: #ffc107; font-size: 2rem;"></i>Agenda 2030</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-              style="color: white !important;"></button>
+              style="background-color: white !important;"></button>
           </div>
           <div class="modal-body">
             <iframe src="http://www.agenda2030.org.br/sobre/" frameborder="0" width="1100" height="2000"></iframe>
@@ -115,7 +115,7 @@
                 style="margin-right: 5px; color: #ffc107; font-size: 2rem;"></i>Simulador de Investimento | Economia
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-              style="color: white !important;"></button>
+              style="background-color: white !important;"></button>
           </div>
           <div class="modal-body">
             <h3>Dimensionamento do sistema de energia Solar e Custos médios</h3>
@@ -165,7 +165,7 @@
       </div>
     </div>
 
-
+    <!-- Hero -->
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
       <div class="mx-auto my-2">
         <h1 class="display-4 fw-normal">
@@ -177,13 +177,13 @@
       <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
+          <!-- Card 1 -->
           <div class="col">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="0" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <title>Placeholder</title>
-                <img src="img/img1.png" class="img-thumbnail" alt="">
+                <img src="img/img1.png" class="img-thumbnail" style="height: 252px;" alt="">
               </svg>
 
               <div class="card-body">
@@ -198,6 +198,7 @@
             </div>
           </div>
 
+          <!-- Card 2 -->
           <div class="col">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="0" xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +225,7 @@
                 <title>Placeholder</title>
                 <img src="img/img3.png" class="img-thumbnail" style="height: 252px;" alt="">
               </svg>
-
+              <!-- Card 3 -->
               <div class="card-body">
                 <p class="card-text">Como funciona</p>
                 <div class="d-flex justify-content-between align-items-center">
@@ -242,19 +243,18 @@
       style="background-color: #ffc107; border-radius: 8px; margin-bottom: 15px;">
       <div class="mb-3" style="padding-top: 11px;">
         <label for="exampleFormControlInput1" class="form-label">Nome</label>
-        <input type="nome" class="form-control" id="exampleFormControlInput1" placeholder="Fulano da Silva" required>
+        <input type="nome" class="form-control" id="exampleFormControlInput1" required>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="fulano@example.com.br" required>
+        <input type="email" class="form-control" id="exampleFormControlInput1" required>
       </div>
       <div class="py-2" style="margin-bottom: 15px;">
         <label for="exampleFormControlTextarea1" class="form-label">Comentários</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="resize: none;" required></textarea>
       </div>
-      <input class="btn btn-light" onclick="formEnviadoSucesso()" style="margin-bottom: 20px;" type="submit" value="Enviar">
+      <input class="btn btn-light" style="margin-bottom: 20px;" type="submit" value="Enviar">
     </div>
-    
   </form>
 
 
