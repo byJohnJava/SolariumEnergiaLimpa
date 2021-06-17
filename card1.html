@@ -58,9 +58,8 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="index.html" class="nav-link px-2 text-white"><i class="bi bi-brightness-high"
                 style="margin-right: 5px; color: #ffc107;"></i>Pagina Inicial</a></li>
-          <li><button type="button" class="btn btn-link nav-link px-2 text-white" data-bs-target="#modalAgenda2030"
-              data-bs-toggle="modal"><i class="bi bi-book" style="margin-right: 5px; color: #ffc107;"></i>Agenda
-              2030</button></li>
+          <li><a href="http://www.agenda2030.org.br/ods/7/" target="_blank" class="nav-link px-2 text-white"><i class="bi bi-book"
+            style="margin-right: 5px; color: #ffc107;"></i>Agenda2030</a></li>
           <li><button type="button" onclick="limparCampos()" class="btn btn-link nav-link px-2 text-white" data-bs-target="#modalCalculadora"
               data-bs-toggle="modal"><i class="bi bi-calculator"
                 style="margin-right: 5px; color: #ffc107;"></i>Simulador de Investimento | Economia</button></li>
@@ -95,26 +94,6 @@
       </div>
       <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
           <img class="rounded-lg-3" src="img/img1.png" alt="" width="720">
-      </div>
-    </div>
-  </div>
-
-   <!-- Modal Agenda 2030 -->
-   <div class="modal fade" id="modalAgenda2030" tabindex="-1" aria-labelledby="Agenda 2030" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header bg-dark">
-          <h5 class="modal-title" id="modalAgenda2030" style="color: white;"><i class="bi bi-book"
-              style="margin-right: 8px; color: #ffc107; font-size: 2rem;"></i>Agenda 2030</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-            style="background-color: white !important;"></button>
-        </div>
-        <div class="modal-body">
-          <iframe src="http://www.agenda2030.org.br/sobre/" frameborder="0" width="1100" height="2000"></iframe>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        </div>
       </div>
     </div>
   </div>
@@ -181,7 +160,7 @@
 </main>
 <form>
   <div class="container justify-content-center"
-    style="background-color: #ffc107; border-radius: 8px; margin-bottom: 15px;">
+    style="background-color: #ffc107; border-radius: 8px; margin-bottom: 15px; width: 798px;">
     <div class="mb-3" style="padding-top: 11px;">
       <label for="exampleFormControlInput1" class="form-label">Nome</label>
       <input type="nome" class="form-control" id="exampleFormControlInput1" required>
@@ -192,7 +171,7 @@
     </div>
     <div class="py-2" style="margin-bottom: 15px;">
       <label for="exampleFormControlTextarea1" class="form-label">Comentários</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" style="resize: none;" required></textarea>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" style="resize: none;" required></textarea>
     </div>
     <input class="btn btn-light" style="margin-bottom: 20px;" type="submit" value="Enviar">
   </div>
@@ -201,11 +180,29 @@
 
 <footer class="footer mt-auto py-3 bg-dark" id="footer">
   <div class="container">
-    <span class="text-white">Site criado por : <br>
-      ED CARLOS AMANCIO DA SILVA <br>
-      JOÃO CARLOS ARAUJO SANTOS <br>
-      LEONARDO VALE BARBOSA <br>
-      LUCAS FERREIRA DOS SANTOS <br>
+    <span class="text-warning d-flex justify-content-center">
+      Trabalho desenvolvido para:
+    </span>
+    <br>
+    <span class="text-white d-flex justify-content-center">
+      <a href="https://fatecosasco.edu.br/fatec/" target="_blank">
+        <img src="img/fatec.png" width="140" height="80">
+      </a>
+    </span>
+    <br>
+    <span class="text-white d-flex justify-content-center">
+      Curso de Tecnologia em Desenvolvimento de Software Multiplataforma
+    </span>
+  </div>
+</footer>
+
+<footer class="footer mt-auto py-3 bg-dark" id="footer">
+  <div class="container">
+    <span class="text-warning d-flex justify-content-center">
+      Copyright © Solarium Energia Limpa
+    </span>
+    <span class="text-warning d-flex justify-content-center">
+      2021
     </span>
   </div>
 </footer>
